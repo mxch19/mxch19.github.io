@@ -3,14 +3,29 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-color: #e3eeff;
+
+    background: 
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 40px),
+        repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 40px),
+        #fcf4e3;
+    background-size: 20px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #ffecec;
-    border-bottom: 2px solid #e0e0e0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+
+    margin-top: 1rem;
+    margin-right: 25rem;
+    margin-left: 25rem;
+    margin-bottom: 0rem;
+    padding: 1rem;
 }
 
 header h1 {
@@ -38,9 +53,16 @@ p {
 }
 
 nav {
-    background-color: #ffe3e3;
-    border-bottom: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    /*border-bottom: 1px solid #ddd;*/
     padding: 10px;
+
+    margin-top: 0rem;
+    margin-right: 15rem;
+    margin-left: 15rem;
+    margin-bottom: 1rem;
+    padding: 0rem;
 }
 
 nav ul {
@@ -77,34 +99,37 @@ nav ul li a {
 
 
 #overlay-content {
-    margin: auto;
     position: relative;
+    margin: auto;
     width: 80%;
     max-width: 1500px;
     height: 90%;
-    background-color: #ffdfdf;
+    background-color: #ffffff;
     border-radius: 5px;
     overflow: hidden;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
 
 #slider {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 #expanded-img {
-    width: 1280px;
-    height: 720px;
+    max-width: 70%;
+    max-height: 70%;
     object-fit: contain;
-    margin-bottom: 20px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 2em;
 }
 
 #close {
@@ -114,7 +139,6 @@ nav ul li a {
     font-size: 2em;
     color: #000000;
     border-radius: 100%;
-    background-color: rgba(255, 171, 171, 0.5);
     cursor: pointer;
 }
 
@@ -124,7 +148,6 @@ nav ul li a {
     color: #000000;
     cursor: pointer;
     border-radius: 20%;
-    background-color: rgba(255, 171, 171, 0.5);
     padding: 10px;
 }
 
@@ -148,11 +171,17 @@ nav ul li a {
 }
 
 #gallery {
+    background-color: rgba(255, 255, 255, 1);
+    align-items: center;
+    justify-content: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: -200px;
-    grid-gap: 25px;
-    padding: 200px;
+    grid-template-columns: repeat(3, minmax(200px, 100px));
+    grid-gap: 1em;
+    padding: 1em;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 .gallery-item {
@@ -248,4 +277,43 @@ body::before {
 
 .content-section.active {
     display: block;
+}
+
+footer {
+    background-color: #ffffff;
+    margin-top: auto;
+    margin-right: 25rem;
+    margin-left: 25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    padding: 1rem;
+}
+
+
+footer p {
+    font-size: 0.8em;
+    margin: 0;
+    color: #333;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #0077cc;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
 }

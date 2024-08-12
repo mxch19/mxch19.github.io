@@ -71,5 +71,4 @@ document.addEventListener('DOMContentLoaded', function() {
           overlay.style.display = 'flex';
         });
       });
-    
 });
