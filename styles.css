@@ -96,13 +96,13 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100%;
 }
 
 #expanded-img {
-    width: 740px;
-    height: 460px;
+    width: 1280px;
+    height: 720px;
     object-fit: contain;
     margin-bottom: 20px;
 }
